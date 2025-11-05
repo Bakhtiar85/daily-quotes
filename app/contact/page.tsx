@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us - Daily Quotes",
+  description: "Get in touch with Daily Quotes. We'd love to hear your feedback, suggestions, or answer any questions you may have.",
+};
+
 export default function ContactPage() {
   return (
-    <main className="bg-gray-50 py-12 px-4">
+    <main className="bg-gray-50 py-16 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>

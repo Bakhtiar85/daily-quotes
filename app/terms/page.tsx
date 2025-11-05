@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions - Daily Quotes",
+  description: "Read our terms and conditions to understand the rules and guidelines for using Daily Quotes website.",
+};
+
 export default function TermsPage() {
   return (
     <main className="bg-gray-50 py-16 px-4">
@@ -5,7 +12,7 @@ export default function TermsPage() {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms & Conditions</h1>
           <p className="text-sm text-gray-500 mb-8">Last updated: November 5, 2025</p>
-          
+
           <div className="space-y-8 text-gray-700">
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-3">Acceptance of Terms</h2>

@@ -5,32 +5,35 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300 flex-shrink-0">
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          
+
           <div className="text-center md:text-left">
             <h3 className="text-white font-bold text-lg">Daily Quotes</h3>
             <p className="text-sm">Inspiration for every day</p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
-            <a 
-              href="https://linkedin.com/in/yourprofile" 
-              target="_blank" 
+            <Link href="/quotes" className="hover:text-white transition">
+              All Quotes
+            </Link>
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
             >
               LinkedIn
             </a>
-            <a 
-              href="https://github.com/yourprofile" 
-              target="_blank" 
+            <a
+              href="https://github.com/yourprofile"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
             >
               GitHub
             </a>
-            <a 
-              href="https://twitter.com/yourprofile" 
-              target="_blank" 
+            <a
+              href="https://twitter.com/yourprofile"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
             >

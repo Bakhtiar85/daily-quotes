@@ -3,8 +3,33 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Daily Quotes - Inspiration Every Day",
-  description: "Get inspired with a new quote every day",
+  title: "Daily Quotes - Inspirational Quotes Every Day",
+  description: "Discover a new inspirational quote every day with thoughtful stories behind them. Get motivated with wisdom from great thinkers, leaders, and philosophers.",
+  keywords: ["daily quotes", "inspirational quotes", "motivational quotes", "quote of the day", "inspiration", "wisdom"],
+  authors: [{ name: "Daily Quotes" }],
+  creator: "Daily Quotes",
+  publisher: "Daily Quotes",
+  openGraph: {
+    title: "Daily Quotes - Inspirational Quotes Every Day",
+    description: "Discover a new inspirational quote every day with thoughtful stories behind them.",
+    url: "https://dailyquotes.com",
+    siteName: "Daily Quotes",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Daily Quotes - Inspirational Quotes Every Day",
+    description: "Discover a new inspirational quote every day with thoughtful stories behind them.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
