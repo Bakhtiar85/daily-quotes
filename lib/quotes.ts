@@ -13,3 +13,14 @@ export function getQuoteOfTheDay(): Quote {
   const index = dayOfYear % quotes.length;
   return quotes[index];
 }
+
+export function getRandomQuote(): Quote {
+  const quotes = getAllQuotes();
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
+
+export function getQuoteById(id: number): Quote | undefined {
+  const quotes = getAllQuotes();
+  return quotes.find(quote => quote.id === id);
+}
