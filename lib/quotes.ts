@@ -1,12 +1,26 @@
 import { Quote } from "@/types";
-import quotesData from "@/data/quotes.json";
+import { supabase } from "@/lib/supabase";
 
-export function getAllQuotes(): Quote[] {
-  return quotesData as Quote[];
+export async function getAllQuotes(): Promise<Quote[]> {
+  try {
+    const { data, error } = await supabase
+      .from("quotes")
+      .select("*")
+      .order("id", { ascending: true });
+
+    if (error) throw error;
+    return data || [];
+  } catch (error) {
+    console.error("Error fetching quotes:", error);
+    return [];
+  }
 }
 
-export function getQuoteOfTheDay(): Quote {
-  const quotes = getAllQuotes();
+export async function getQuoteOfTheDay(): Promise<Quote | null> {
+  const quotes = await getAllQuotes();
+  
+  if (quotes.length === 0) return null;
+  
   const dayOfYear = Math.floor(
     (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000
   );
@@ -14,13 +28,27 @@ export function getQuoteOfTheDay(): Quote {
   return quotes[index];
 }
 
-export function getRandomQuote(): Quote {
-  const quotes = getAllQuotes();
+export async function getRandomQuote(): Promise<Quote | null> {
+  const quotes = await getAllQuotes();
+  
+  if (quotes.length === 0) return null;
+  
   const randomIndex = Math.floor(Math.random() * quotes.length);
   return quotes[randomIndex];
 }
 
-export function getQuoteById(id: number): Quote | undefined {
-  const quotes = getAllQuotes();
-  return quotes.find(quote => quote.id === id);
+export async function getQuoteById(id: number): Promise<Quote | null> {
+  try {
+    const { data, error } = await supabase
+      .from("quotes")
+      .select("*")
+      .eq("id", id)
+      .single();
+
+    if (error) throw error;
+    return data;
+  } catch (error) {
+    console.error("Error fetching quote:", error);
+    return null;
+  }
 }

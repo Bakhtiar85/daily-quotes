@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/components/Footer";
+import LayoutWrapper from "@/components/LayoutWrapper";
 
 export const metadata: Metadata = {
   title: "Daily Quotes - Inspirational Quotes Every Day",
@@ -39,11 +39,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="h-screen flex flex-col">
-        <div className="flex-1 overflow-y-auto">
-          {children}
-        </div>
-        <Footer />
+      <body>
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );
