@@ -48,13 +48,12 @@ export default function CreateQuotePage() {
     };
 
     return (
-        <main className="min-h-screen bg-gray-50 py-8 px-4">
+        <main className="min-h-screen bg-gray-50 py-8 px-4 text-black">
             <div className="max-w-4xl mx-auto">
                 <div className="mb-8">
                     <button
                         onClick={() => router.push("/admin/dashboard")}
-                        className="text-indigo-600 hover:text-indigo-700 font-semibold mb-4"
-                    >
+                        className="text-indigo-600 hover:text-indigo-700 font-semibold mb-4 cursor-pointer">
                         ← Back to Dashboard
                     </button>
                     <h1 className="text-4xl font-bold text-gray-900">Create New Quote</h1>
@@ -132,14 +131,14 @@ export default function CreateQuotePage() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition-colors disabled:bg-gray-400"
+                            className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition-colors disabled:bg-gray-400 cursor-pointer"
                         >
                             {loading ? "Creating..." : "Create Quote"}
                         </button>
                         <button
                             type="button"
                             onClick={() => router.push("/admin/dashboard")}
-                            className="px-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 rounded-lg transition-colors"
+                            className="px-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 rounded-lg transition-colors cursor-pointer"
                         >
                             Cancel
                         </button>

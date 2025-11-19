@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
 
           <div className="text-center md:text-left">
-            <h3 className="text-white font-bold text-lg">Daily Quotes</h3>
+            <Link href={"/"} className="text-white font-bold text-lg">Daily Quotes</Link>
             <p className="text-sm">Inspiration for every day</p>
           </div>
 

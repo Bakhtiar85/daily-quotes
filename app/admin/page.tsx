@@ -13,7 +13,7 @@ export default function AdminLoginPage() {
         e.preventDefault();
 
         // Static credentials
-        if (username === "admin" && password === "admin123") {
+        if (username === "admin" && password === "admin1234567") {
             // Store simple flag in sessionStorage
             sessionStorage.setItem("adminAuth", "true");
             router.push("/admin/dashboard");
@@ -24,7 +24,7 @@ export default function AdminLoginPage() {
 
     return (
         <main className="min-h-screen bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center p-4">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+            <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md text-black">
                 <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Admin Login</h1>
 
                 <form onSubmit={handleLogin} className="space-y-4">
@@ -60,7 +60,7 @@ export default function AdminLoginPage() {
 
                     <button
                         type="submit"
-                        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition-colors"
+                        className="w-full cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition-colors"
                     >
                         Login
                     </button>

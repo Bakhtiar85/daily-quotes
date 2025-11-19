@@ -69,13 +69,13 @@ export default function AdminDashboard() {
                     <div className="flex gap-4">
                         <button
                             onClick={() => router.push("/admin/dashboard/create")}
-                            className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg"
+                            className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg cursor-pointer"
                         >
                             + Create New Quote
                         </button>
                         <button
                             onClick={handleLogout}
-                            className="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg"
+                            className="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg cursor-pointer"
                         >
                             Logout
                         </button>
@@ -110,13 +110,13 @@ export default function AdminDashboard() {
                                         <div className="flex gap-2">
                                             <button
                                                 onClick={() => router.push(`/admin/dashboard/edit/${quote.id}`)}
-                                                className="px-4 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded"
+                                                className="px-4 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded cursor-pointer"
                                             >
                                                 Edit
                                             </button>
                                             <button
                                                 onClick={() => handleDelete(quote.id)}
-                                                className="px-4 py-1 bg-red-600 hover:bg-red-700 text-white rounded"
+                                                className="px-4 py-1 bg-red-600 hover:bg-red-700 text-white rounded cursor-pointer"
                                             >
                                                 Delete
                                             </button>

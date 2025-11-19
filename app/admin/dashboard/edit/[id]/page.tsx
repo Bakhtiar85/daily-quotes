@@ -87,7 +87,7 @@ export default function EditQuotePage() {
                 <div className="mb-8">
                     <button
                         onClick={() => router.push("/admin/dashboard")}
-                        className="text-indigo-600 hover:text-indigo-700 font-semibold mb-4"
+                        className="text-indigo-600 hover:text-indigo-700 font-semibold mb-4 cursor-pointer"
                     >
                         ← Back to Dashboard
                     </button>
@@ -164,14 +164,14 @@ export default function EditQuotePage() {
                         <button
                             type="submit"
                             disabled={submitting}
-                            className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition-colors disabled:bg-gray-400"
+                            className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition-colors disabled:bg-gray-400 cursor-pointer"
                         >
                             {submitting ? "Updating..." : "Update Quote"}
                         </button>
                         <button
                             type="button"
                             onClick={() => router.push("/admin/dashboard")}
-                            className="px-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 rounded-lg transition-colors"
+                            className="px-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 rounded-lg transition-colors cursor-pointer"
                         >
                             Cancel
                         </button>
