@@ -1,3 +1,4 @@
+// app\page.tsx
 import { getQuoteOfTheDay, getAllQuotes } from "@/lib/quotes";
 import QuoteDisplay from "@/components/QuoteDisplay";
 
