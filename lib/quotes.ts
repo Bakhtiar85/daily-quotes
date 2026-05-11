@@ -1,9 +1,9 @@
 import { Quote } from "@/types";
-import { supabase } from "@/lib/supabase";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export async function getAllQuotes(): Promise<Quote[]> {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseAdmin
       .from("quotes")
       .select("*")
       .order("id", { ascending: true });
@@ -39,7 +39,7 @@ export async function getRandomQuote(): Promise<Quote | null> {
 
 export async function getQuoteById(id: number): Promise<Quote | null> {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseAdmin
       .from("quotes")
       .select("*")
       .eq("id", id)

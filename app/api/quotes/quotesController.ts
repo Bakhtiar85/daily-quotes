@@ -1,9 +1,9 @@
-import { supabase } from "@/lib/supabase";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export const quotesController = {
   // Get all quotes
   async getAllQuotes() {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseAdmin
       .from("quotes")
       .select("*")
       .order("id", { ascending: true });
@@ -14,7 +14,7 @@ export const quotesController = {
 
   // Get single quote by ID
   async getQuoteById(id: number) {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseAdmin
       .from("quotes")
       .select("*")
       .eq("id", id)
@@ -32,7 +32,7 @@ export const quotesController = {
     description: string;
     story: string;
   }) {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseAdmin
       .from("quotes")
       .insert([quoteData])
       .select()
@@ -50,7 +50,7 @@ export const quotesController = {
     description: string;
     story: string;
   }>) {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseAdmin
       .from("quotes")
       .update({ ...quoteData, updated_at: new Date().toISOString() })
       .eq("id", id)
@@ -63,7 +63,7 @@ export const quotesController = {
 
   // Delete quote
   async deleteQuote(id: number) {
-    const { error } = await supabase
+    const { error } = await supabaseAdmin
       .from("quotes")
       .delete()
       .eq("id", id);

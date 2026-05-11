@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     const data = await quotesController.createQuote(body);
     return NextResponse.json(data, { status: 201 });
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : "An error occurred";
+    const message = error instanceof Error ? error.message : "An error occurred";    
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
