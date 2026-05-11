@@ -1,6 +1,7 @@
 // app\page.tsx
 import { getQuoteOfTheDay, getAllQuotes } from "@/lib/quotes";
 import QuoteDisplay from "@/components/QuoteDisplay";
+import AdsterraAd from "@/components/AdsterraAd";
 
 export default async function Home() {
   const quoteOfTheDay = await getQuoteOfTheDay();
@@ -17,5 +18,10 @@ export default async function Home() {
     );
   }
 
-  return <QuoteDisplay initialQuote={quoteOfTheDay} allQuotes={allQuotes} />;
+  return (
+    <>
+      <QuoteDisplay initialQuote={quoteOfTheDay} allQuotes={allQuotes} />
+      <AdsterraAd />
+    </>
+  );
 }

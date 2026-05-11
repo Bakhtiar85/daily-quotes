@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllQuotes } from "@/lib/quotes";
 import QuotesGrid from "@/components/QuotesGrid";
+import AdsterraAd from "@/components/AdsterraAd";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -35,6 +36,8 @@ export default async function AllQuotesPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">All Quotes</h1>
           <p className="text-lg text-gray-600">Browse our complete collection of inspirational quotes</p>
         </div>
+
+        <AdsterraAd />
 
         <QuotesGrid quotes={quotes} />
 

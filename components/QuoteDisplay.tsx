@@ -25,7 +25,7 @@ export default function QuoteDisplay({ initialQuote, allQuotes }: QuoteDisplayPr
   return (
     <main>
       {/* Hero Quote Banner - Enhanced */}
-      <section className="relative min-h-[80vh] bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center px-4 pt-8 pb-20 overflow-hidden">
+      <section className="relative min-h-[80vh] bg-linear-to-br from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center px-4 pt-8 pb-20 overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -86,7 +86,7 @@ export default function QuoteDisplay({ initialQuote, allQuotes }: QuoteDisplayPr
       </section>
 
       {/* Story Section - Enhanced */}
-      <section ref={storyRef} className="relative bg-gradient-to-b from-gray-50 to-white py-20 px-4">
+      <section ref={storyRef} className="relative bg-linear-to-b from-gray-50 to-white py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block px-6 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold mb-4">
@@ -95,7 +95,7 @@ export default function QuoteDisplay({ initialQuote, allQuotes }: QuoteDisplayPr
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Discover the Context
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-linear-to-r from-indigo-600 to-purple-600 mx-auto rounded-full"></div>
           </div>
 
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
